@@ -1,0 +1,25 @@
+뚝심게임즈개발과정 중 문제발생 사항 및 대처
+
+1. background-size에 transition이 적용이 안되는 사례
+ - background-size: cover; >>>>>> background-size: 220%;로 적용하려 했으나 먹히지 않음
+ - 이유: 초기값이 cover/contain라면 바뀌는 값이 %일때 사이즈는 변경되지만 transition은 적용이되지않음
+ - 해결완료
+2. background-image: lineargradiant에 transition이 안먹힘
+ - 선생님문서 한번 더 확인- 위치랑 사이즈 %를 줘서 바꾸줌
+
+3. member부분 회전할때 회전각 육각형인데 회전각 45도로 착각 및 전체
+    cardWrap부분 회전할때 왜곡이 심함
+-이유 :transform-style: preserve-3d;가 body와 부모요소 둘 다 들어가야함
+-해결완료
+4. quest.getBoundingClientRect().top/bottom/height/width등 정보를
+   가져올수있다
+5. 새로고침할때 company부분이 반짝이듯 보임
+ -해결키워드 : 이미지사이즈, 저장파일, 뒷배경색상 transparent화
+ -선생님 : domload이후 백그라운드이미지를 추가해준다
+6. https://www.pinterest.co.kr/pin/851532242040190463/ 
+소셜부분 디자인안??추가
+--------------------------------------------------------
+사운드부분 기획만
+소리의 근원 근처에는 알맞은 소리가 들리는 이벤트가,
+ 근원에서 조금 떨어지면(스크롤로 멀어짐) 
+2초 뒤에 폭포소리가 사라지는 이벤트를 넣었습니다
